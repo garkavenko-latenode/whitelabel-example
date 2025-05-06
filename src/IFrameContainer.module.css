@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.leftPanel {
+  width: 300px;
+  z-index: 2;
+  padding-right: 20px;
+}
+
+.leftPanel input,
+.leftPanel textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #00796b;
+  border-radius: 4px;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rightPanel {
+  flex: 1;
+  background-color: #fff;
+}
