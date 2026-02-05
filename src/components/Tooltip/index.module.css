@@ -1,0 +1,29 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.container {
+  position: absolute;
+  background-color: white;
+  bottom: 50%;
+  left: 125%;
+  transform: translate(0, 50%);
+  border-radius: 6px;
+  padding: 12px;
+  visibility: hidden;
+  min-width: fit-content;
+  box-shadow:
+    0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  .tooltip:hover & {
+    visibility: visible;
+  }
+}

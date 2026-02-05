@@ -4,9 +4,14 @@
 }
 
 .leftPanel {
-  width: 300px;
+  position: relative;
   z-index: 2;
   padding-right: 20px;
+  width: fit-content;
+}
+
+.leftPanelInner {
+  width: 300px;
 }
 
 .leftPanel input,
@@ -14,7 +19,7 @@
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #00796b;
+  border: 1px solid #777777;
   border-radius: 4px;
 }
 
@@ -27,4 +32,41 @@
 .rightPanel {
   flex: 1;
   background-color: #fff;
+}
+
+.uiConfigError {
+  border-color: red !important;
+}
+
+.uiConfigErrorLabel {
+  color: red;
+  font-size: 14px;
+}
+
+.uiConfigJSONContainer {
+  margin-bottom: 10px;
+
+  textarea {
+    margin-bottom: 0;
+    height: 150px;
+  }
+}
+
+.actionBtns {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hideLeftPanelBtn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

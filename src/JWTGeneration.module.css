@@ -15,23 +15,54 @@
   flex-direction: column;
 }
 
-input, select {
-  margin-bottom: 10px;
+input,
+select {
   padding: 10px;
-  border: 1px solid #00796b;
+  border: 1px solid #777777;
   border-radius: 4px;
 }
 
-.buttonContainer {
-  margin-top: 10px;
-}
-
 .tokenDisplay {
-  margin-top: 20px;
+  & textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+  }
+
+  & button {
+    margin-top: 10px; 
+  }
 }
 
-.tokenDisplay textarea {
-  width: 100%;
-  height: 100px;
-  resize: none;
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+
+  input {
+    margin: 0;
+  }
+}
+
+.granteeRow {
+  display: flex;
+  gap: 10px;
+
+  input {
+    flex: 1;
+    margin: 0;
+  }
+}
+
+.granteesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fieldsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
