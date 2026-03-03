@@ -9,6 +9,7 @@ function IFrameContainer() {
   const [uiConfigJSONError, setUIConfigJSONError] = useState(false);
   const [navigateToPath, setNavigateToPath] = useState("");
   const [whiteLabelSDK] = useState(() => new window.LatenodeEmbeddedSDK());
+  const [allowCookies, setAllowCookies] = useState(true);
 
   const configParsed = (() => {
     try {
@@ -33,6 +34,7 @@ function IFrameContainer() {
         token: jwtToken,
         container: "lowCodeDivContainer",
         ui: configParsed,
+        allowCookies,
         navigation: {
           handler: ({ route }) => {
             console.log("user navigated to " + route);
@@ -242,6 +244,15 @@ function IFrameContainer() {
             <Button onClick={getScenarioWebhooksUrls}>
               Get Scenario Webhook URL
             </Button>
+          </div>
+          <div className={styles.allowCookiesContainer}>
+            <input
+              type="checkbox"
+              checked={allowCookies}
+              onChange={() => setAllowCookies((prev) => !prev)}
+              className={styles.allowCookiesCheckbox}
+            />
+            <span>Allow Cookies</span>
           </div>
         </div>
       </div>

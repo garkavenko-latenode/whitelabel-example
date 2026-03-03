@@ -70,3 +70,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.allowCookiesContainer {
+  margin-top: 10px;
+  display: flex;
+}
+
+.allowCookiesCheckbox {
+  flex: 0;
+  margin: 0 6px 0 0 !important;
+}
